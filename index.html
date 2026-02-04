@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+
+<body>
+
+  <!-- HERO (page 1 avec image) -->
+  <div class="hero">
+
+    <div class="hero-top">
+      <div class="logo">LZ</div>
+
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav menu">
+        <a href="#projects">Projets</a>
+        <a href="#about">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <div class="hero-center">
+      <h1>LIVIA ZUCCA</h1>
+      <p>Création numérique, Photographie</p>
+
+      <div class="buttons">
+        <a href="#contact" class="btn">Me contacter</a>
+        <a href="#projects" class="btn">Voir mes projets</a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ✅ WRAPPER POUR TOUT LE RESTE -->
+  <main class="portfolio-content">
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="about-card">
+
+        <h2>À propos de moi</h2>
+
+        <p>
+          Bienvenue sur mon portfolio, je m'appelle Livia et je suis étudiante en première année de BUT MMI, je développe des compétences variées
+          dans les domaines du multimédia et de l'internet.
+        </p>
+
+        <p>
+          À travers ce portfolio, je partage mon parcours et mes projets afin de montrer
+          ce que j’aime faire et comment j’évolue dans l’univers du multimédia.
+        </p>
+
+        <div class="skills-icons">
+          <span>🎨</span>
+          <span>🖌️</span>
+          <span>💻</span>
+          <span>📷</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="skills">
+
+      <h2>Mes connaissances</h2>
+      
+
+      <div class="skills-container">
+
+        <div class="skill-card">
+          <img src="icons/html.png" alt="HTML">
+          <h3>Développement Web</h3>
+          <p>HTML, CSS</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="icons/illustrator.png" alt="Illustrator">
+          <h3>Design Graphique</h3>
+          <p>Photoshop, Illustrator, Canva, UI, UX, identité visuelle et créations numériques</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="icons/camera.png" alt="Audiovisuel">
+          <h3>Audiovisuel</h3>
+          <p>Photographie, montage vidéo et création de contenus multimédias, Premiere Pro, Da Vinci</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="icons/communication.png" alt="Communication">
+          <h3>Communication</h3>
+          <p>Stratégie digitale et gestion de projets web</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+
+      <h2 class="projects-title">Mes projets</h2>
+
+      <div class="projects-container">
+
+        <!-- PROJET 1 -->
+        <a href="projet-interview.html" class="project-link">
+          <div class="project-card">
+
+            <div class="project-image">
+              <img src="img/projet-interview.jpg" alt="Interview Audiovisuelle">
+            </div>
+
+            <div class="project-infos">
+              <span class="project-academic">Académique</span>
+
+              <p class="project-name">Interview</p>
+              <p class="project-type">Audiovisuelle</p>
+
+              <div class="project-tags">
+                <span>Premiere Pro</span>
+              </div>
+            </div>
+
+          </div>
+        </a>
+
+        <!-- PROJET 2 -->
+        <a href="projet-corsica.html" class="project-link">
+          <div class="project-card">
+
+            <div class="project-image">
+              <img src="img/projet-corsica.jpg" alt="Corsica Games Week">
+            </div>
+
+            <div class="project-infos">
+              <span class="project-academic">Académique</span>
+              <p class="project-name">Corsica Games Week</p>
+              <p class="project-type">Communication · Design Graphique</p>
+
+              <div class="project-tags">
+                <span>Canva</span>
+                <span>Photoshop</span>
+              </div>
+            </div>
+
+          </div>
+        </a>
+
+        <!-- PROJET 3 -->
+        <a href="projet-parfum.html" class="project-link">
+          <div class="project-card">
+
+            <div class="project-image">
+              <img src="img/projet-parfum.jpg" alt="Affiche de Parfum">
+            </div>
+
+            <div class="project-infos">
+              <span class="project-academic">Académique</span>
+              <p class="project-name">Affiche de Parfum</p>
+              <p class="project-type">Design Graphique</p>
+
+              <div class="project-tags">
+                <span>Photoshop</span>
+              </div>
+            </div>
+
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+      <h2 class="contact-title">Contactez-moi</h2>
+      <p class="contact-subtitle">
+        Vous avez un projet ou une opportunité ? N’hésitez pas à me contacter !
+      </p>
+
+      <div class="contact-container">
+
+        <!-- GAUCHE -->
+        <div class="contact-infos">
+
+          <div class="info-block">
+            <p class="info-title">📧 EMAIL</p>
+            <p class="info-text">zucca.livia@icloud.com</p>
+          </div>
+
+          <div class="info-block">
+            <p class="info-title">📍 LOCALISATION</p>
+            <a 
+              href="https://www.google.com/maps/place/Corse"
+              target="_blank"
+              class="info-link"
+            >
+              Corse
+            </a>
+          </div>
+
+        </div>
+
+        <!-- DROITE -->
+        <form class="contact-form">
+
+          <label>Nom</label>
+          <input type="text" placeholder="Votre nom">
+
+          <label>Email</label>
+          <input type="email" placeholder="email@exemple.com">
+
+          <label>Message</label>
+          <textarea placeholder="Votre message"></textarea>
+
+          <button type="submit" class="send-btn">Envoyer</button>
+        </form>
+
+      </div>
+
+      <div class="contact-footer">
+
+        <div class="footer-text">
+          <p class="privacy">Politique de confidentialité</p>
+          <p class="portfolio-year">Portfolio 2026</p>
+        </div>
+
+        <div class="socials">
+          <a href="https://www.instagram.com/TON_PSEUDO/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://www.tiktok.com/@TON_PSEUDO" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
