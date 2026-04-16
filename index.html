@@ -1,40 +1,215 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Livia Zucca, étudiante en BUT MMI – création numérique, photographie, design graphique et développement web." />
+  <title>Livia Zucca – Portfolio</title>
 
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Preconnect Google Fonts pour éviter le render-blocking -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+  <!-- Font Awesome (icônes) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- HERO (page 1 avec image) -->
-  <div class="hero">
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-label="Section d'accueil">
 
-    <div class="hero-top">
-      <div class="logo">LZ</div>
+    <input type="checkbox" id="menu-toggle" aria-hidden="true" />
 
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="burger">
+    <header class="hero-top">
+      <div class="logo" aria-label="Logo LZ">LZ</div>
+
+      <label class="burger" for="menu-toggle" aria-label="Ouvrir le menu de navigation" role="button" tabindex="0">
         <span></span>
         <span></span>
         <span></span>
       </label>
 
-      <nav class="nav menu">
+      <nav class="nav" aria-label="Navigation principale">
         <a href="#projects">Projets</a>
         <a href="#about">À propos</a>
         <a href="#contact">Contact</a>
       </nav>
+    </header>
+
+    <div class="hero-center">
+      <h1>LIVIA ZUCCA</h1>
+      <p>Création numérique, Photographie</p>
+      <div class="buttons">
+        <a href="#contact" class="btn">Me contacter</a>
+        <a href="#projects" class="btn">Voir mes projets</a>
+      </div>
     </div>
+
+  </section>
+
+  <!-- ===== À PROPOS ===== -->
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="about-card">
+      <h2 id="about-title">À propos de moi</h2>
+      <p>
+        Bienvenue sur mon portfolio, je m'appelle Livia et je suis étudiante en première année de BUT MMI,
+        je développe des compétences variées dans les domaines du multimédia et de l'internet.
+      </p>
+      <p>
+        À travers ce portfolio, je partage mon parcours et mes projets afin de montrer
+        ce que j'aime faire et comment j'évolue dans l'univers du multimédia.
+      </p>
+      <div class="skills-icons" aria-label="Icônes de compétences">
+        <span role="img" aria-label="Peinture">🎨</span>
+        <span role="img" aria-label="Pinceau">🖌️</span>
+        <span role="img" aria-label="Ordinateur">💻</span>
+        <span role="img" aria-label="Appareil photo">📷</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPÉTENCES ===== -->
+  <section class="skills" id="skills" aria-labelledby="skills-title">
+    <h2 id="skills-title">Mes connaissances</h2>
+    <div class="skills-line" aria-hidden="true"></div>
+    <div class="skills-container">
+
+      <article class="skill-card">
+        <img src="icons/html.png" alt="Logo HTML" width="55" height="55" loading="lazy" />
+        <h3>Développement Web</h3>
+        <p>HTML, CSS</p>
+      </article>
+
+      <article class="skill-card">
+        <img src="icons/illustrator.png" alt="Logo Adobe Illustrator" width="55" height="55" loading="lazy" />
+        <h3>Design Graphique</h3>
+        <p>Photoshop, Illustrator, Canva, UI, UX, identité visuelle et créations numériques</p>
+      </article>
+
+      <article class="skill-card">
+        <img src="icons/camera.png" alt="Icône audiovisuel" width="55" height="55" loading="lazy" />
+        <h3>Audiovisuel</h3>
+        <p>Photographie, montage vidéo et création de contenus multimédias, Premiere Pro, Da Vinci</p>
+      </article>
+
+      <article class="skill-card">
+        <img src="icons/communication.png" alt="Icône communication" width="55" height="55" loading="lazy" />
+        <h3>Communication</h3>
+        <p>Stratégie digitale et gestion de projets web</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== PROJETS ===== -->
+  <section class="projects" id="projects" aria-labelledby="projects-title">
+    <h2 id="projects-title">Mes projets</h2>
+    <div class="projects-container">
+
+      <article class="project-card">
+        <a href="projet-interview.html" class="project-link" aria-label="Voir le projet Interview Audiovisuelle">
+          <div class="project-image">
+            <img src="img/projet-interview.jpg" alt="Aperçu du projet Interview Audiovisuelle" width="380" height="260" loading="lazy" />
+          </div>
+          <div class="project-infos">
+            <span class="project-academic">Académique</span>
+            <p class="project-name">Interview</p>
+            <p class="project-type">Audiovisuelle</p>
+            <div class="project-tags">
+              <span>Premiere Pro</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card">
+        <a href="projet-corsica.html" class="project-link" aria-label="Voir le projet Corsica Games Week">
+          <div class="project-image">
+            <img src="img/projet-corsica.jpg" alt="Aperçu du projet Corsica Games Week" width="380" height="260" loading="lazy" />
+          </div>
+          <div class="project-infos">
+            <span class="project-academic">Académique</span>
+            <p class="project-name">Corsica Games Week</p>
+            <p class="project-type">Communication · Design Graphique</p>
+            <div class="project-tags">
+              <span>Canva</span>
+              <span>Photoshop</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card">
+        <a href="projet-parfum.html" class="project-link" aria-label="Voir le projet Affiche de Parfum">
+          <div class="project-image">
+            <img src="img/projet-parfum.jpg" alt="Aperçu du projet Affiche de Parfum" width="380" height="260" loading="lazy" />
+          </div>
+          <div class="project-infos">
+            <span class="project-academic">Académique</span>
+            <p class="project-name">Affiche de Parfum</p>
+            <p class="project-type">Design Graphique</p>
+            <div class="project-tags">
+              <span>Photoshop</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="contact-title">Contactez-moi</h2>
+    <p class="contact-subtitle">Vous avez un projet ou une opportunité ? N'hésitez pas à me contacter !</p>
+
+    <div class="contact-container">
+
+      <!-- Infos -->
+      <div class="contact-infos">
+        <div class="info-block">
+          <p class="info-title"><i class="fa fa-envelope" aria-hidden="true"></i> EMAIL</p>
+          <a href="mailto:zucca.livia@icloud.com" class="info-link">zucca.livia@icloud.com</a>
+        </div>
+        <div class="info-block">
+          <p class="info-title"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> LOCALISATION</p>
+          <a href="https://www.google.com/maps/place/Corse" class="info-link" target="_blank" rel="noopener noreferrer">Corse</a>
+        </div>
+      </div>
+
+      <!-- Formulaire -->
+      <form class="contact-form" action="#" method="post" aria-label="Formulaire de contact" novalidate>
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom" autocomplete="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Votre email" autocomplete="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+
+        <button type="submit" class="send-btn">Envoyer</button>
+      </form>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="contact-footer" aria-label="Pied de page">
+      <p class="privacy">Politique de confidentialité</p>
+      <p class="portfolio-year">Portfolio 2026</p>
+      <nav class="socials" aria-label="Réseaux sociaux">
+        <a href="#" aria-label="Instagram de Livia Zucca"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="LinkedIn de Livia Zucca"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+      </nav>
+    </footer>
+
+  </section>
+
+</body>
+</html>    </div>
 
     <div class="hero-center">
       <h1>LIVIA ZUCCA</h1>
