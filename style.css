@@ -1,8 +1,4 @@
-:root {
-  --menu-bg: rgba(0, 0, 0, 0.85);
-}
-
-/* RESET CLEAN */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -11,25 +7,31 @@
 
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
 }
 
-/* IMG FIX PERF */
+/* IMG FIX */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero {
   height: 100vh;
-  background: url("img/moi.webp") center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .hero::before {
@@ -37,36 +39,27 @@ img {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.45);
+  z-index: 1;
 }
 
 .hero-top,
 .hero-center {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
-
-/* TOP */
 
 .hero-top {
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 30px 60px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
-
-.logo {
-  color: white;
-  font-weight: bold;
-}
-
-/* NAV */
 
 .nav {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .nav a {
@@ -74,157 +67,53 @@ img {
   text-decoration: none;
 }
 
-/* BURGER */
-
-#menu-toggle {
-  display: none;
-}
-
-.burger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-}
-
-.burger span {
-  width: 28px;
-  height: 3px;
-  background: white;
-}
-
-/* CENTER */
-
 .hero-center {
   text-align: center;
 }
 
 .hero-center h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 52px;
-  letter-spacing: 6px;
   color: white;
+  font-size: 48px;
 }
 
 .hero-center p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-  margin-top: 40px;
   color: white;
+  margin-top: 20px;
 }
 
-/* BUTTONS */
-
 .buttons {
-  margin-top: 100px;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
+  margin-top: 60px;
 }
 
 .btn {
-  padding: 16px 40px;
-  background: rgba(255,255,255,0.8);
-  color: black;
+  padding: 14px 30px;
+  background: white;
   border-radius: 20px;
   text-decoration: none;
-  transition: 0.3s;
 }
 
-.btn:hover {
-  transform: scale(1.05);
-}
+/* SECTIONS */
 
-/* ================= ABOUT ================= */
-
-.about {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+section {
   padding: 80px 20px;
 }
 
-.about-card {
-  max-width: 900px;
-  padding: 60px;
-  border-radius: 25px;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-  text-align: center;
-}
-
-.about-card h2 {
-  font-size: 40px;
-  margin-bottom: 30px;
-}
-
-.about-card p {
-  margin-bottom: 20px;
-}
-
-/* ================= SKILLS ================= */
-
-.skills {
-  padding: 100px 40px;
-  text-align: center;
-}
-
-.skills-container {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.skill-card {
-  width: 250px;
-  padding: 30px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.2);
-}
-
-.skill-card img {
-  width: 50px;
-  margin-bottom: 15px;
-}
-
-/* ================= PROJECTS ================= */
-
-.projects {
-  padding: 100px 40px;
-}
-
+.skills-container,
 .projects-container {
   display: flex;
-  gap: 40px;
+  gap: 30px;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
+.skill-card,
 .project-card {
-  width: 350px;
-  border-radius: 20px;
-  overflow: hidden;
+  width: 250px;
 }
 
-.project-image {
-  height: 220px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.project-infos {
-  padding: 15px;
-  background: #444;
-  color: white;
-}
-
-/* ================= CONTACT ================= */
+/* CONTACT */
 
 .contact {
-  padding: 100px 40px;
   background: black;
   color: white;
 }
@@ -237,37 +126,23 @@ img {
 
 .contact-form input,
 .contact-form textarea {
-  padding: 12px;
+  padding: 10px;
   border-radius: 10px;
   border: none;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media (max-width: 768px) {
 
-  .burger {
-    display: flex;
-  }
-
   .nav {
-    position: absolute;
-    top: 100%;
-    right: 20px;
-    flex-direction: column;
-    background: var(--menu-bg);
-    padding: 20px;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  #menu-toggle:checked + .burger + .menu {
-    opacity: 1;
-    pointer-events: auto;
+    display: none;
   }
 
   .buttons {
+    display: flex;
     flex-direction: column;
+    gap: 10px;
   }
 
 }
