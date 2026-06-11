@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Corps appareil -->
+  <rect x="8" y="20" width="48" height="32" rx="6" fill="#1b1b1b"/>
+  <!-- Bosse flash -->
+  <rect x="22" y="14" width="20" height="10" rx="4" fill="#1b1b1b"/>
+  <!-- Objectif extérieur -->
+  <circle cx="32" cy="36" r="12" fill="#3a3a3a"/>
+  <!-- Objectif intérieur -->
+  <circle cx="32" cy="36" r="7" fill="#111"/>
+  <!-- Reflet -->
+  <circle cx="29" cy="33" r="2.5" fill="white" opacity="0.25"/>
+  <!-- Flash bouton -->
+  <circle cx="14" cy="26" r="2" fill="#6b6352"/>
+</svg>
